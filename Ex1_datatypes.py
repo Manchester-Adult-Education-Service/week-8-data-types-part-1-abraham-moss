@@ -107,7 +107,19 @@ print("-------------------------------------------\n"
 # Item 2: phone (silver) - Found at: shopping centre
 #
 # Write your code below:
+found_items = []
+found_items.append(found_item)
+print(found_items)
 
+userWantToAddItem =input("do you want add another items: (yes/No)")
+if userWantToAddItem == "yes":
+    new_item_to_add = {}
+    new_item_to_add["name"] = input("please enter the item name:")
+    new_item_to_add["colour"] = input("please enter the item coulors:")
+    new_item_to_add["location"] = input("please enter the item location:")
+
+    found_items.append(new_item_to_add)
+    print(f"This is after I've added my new item: {found_items}")
 # HINT: To access dictionary values, use: dictionary_name["key_name"]
 # Example: found_item["name"] gets the name value
 
