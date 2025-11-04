@@ -56,6 +56,16 @@ print("-------------------------------------------\n"
 # Recorded: wallet (black) found at train station
 #
 # Write your code below:
+found_item = {
+    "item_name": "iphone",
+    "colour": "white",
+    "location": "Abraham Moss",
+}
+
+print(found_item["item_name"])
+print(found_item["colour"])
+print(found_item["location"])
+print(f"Recorded: {found_item["item_name"]} ({found_item["colour"]}) found at {found_item["location"]}")
 
 # HINT: Create dictionary syntax is:
 # my_dict = {"key1": value1, "key2": value2, "key3": value3}
@@ -97,7 +107,19 @@ print("-------------------------------------------\n"
 # Item 2: phone (silver) - Found at: shopping centre
 #
 # Write your code below:
+found_items = []
+found_items.append(found_item)
+print(found_items)
 
+userWantToAddItem =input("do you want add another items: (yes/No)")
+if userWantToAddItem == "yes":
+    new_item_to_add = {}
+    new_item_to_add["name"] = input("please enter the item name:")
+    new_item_to_add["colour"] = input("please enter the item coulors:")
+    new_item_to_add["location"] = input("please enter the item location:")
+
+    found_items.append(new_item_to_add)
+    print(f"This is after I've added my new item: {found_items}")
 # HINT: To access dictionary values, use: dictionary_name["key_name"]
 # Example: found_item["name"] gets the name value
 
